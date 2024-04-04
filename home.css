@@ -1,0 +1,276 @@
+/* CSS code with fix for extra space on the right side on mobile devices */
+
+* {
+  margin: auto;
+  padding: auto;
+  font-family: "Noto Sans Khojki", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  user-select: none;
+  overflow: none;
+  scroll-behavior: smooth;
+}
+.loader {
+  border: 4px solid rgba(245, 242, 242, 0.3);
+  border-top: 4px solid #ffffff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -20px;
+  margin-top: -20px;
+}
+.loading-txt {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 54vh;
+  text-align: center;
+  font-family: "Questrial", sans-serif;
+  font-size: 1rem;
+  color: white;
+}  
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Hide content initially */
+.hidden {
+  display: none;
+}
+body {
+  width: 100vw;
+  height: 90vh;
+  background: rgb(46,59,91);
+  margin: auto;
+}
+
+.logo-nav {
+  width: 11rem;
+  float: left;
+  padding: 12px;
+  user-select: none;
+}
+
+.nav {
+  position: relative;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  font-family: "Noto Sans Khojki", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  float: right;
+  background-color: #2e3b5b;
+  height: 75px;
+  width: 100vw;
+}
+
+.nav a.links {
+  display: inline-block;
+  text-decoration: none;
+  color: #e6e6e6;
+  float: inline-end;
+  text-align: center;
+  padding: 18px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.nav a.links:hover {
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.read {
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+p {
+  color: #e6e6e6;
+}
+
+.middle {
+  top: 20vh;
+  position: relative;
+  height: fit-content;
+}
+
+.middle img {
+  display: block;
+  width: 50%;
+  margin: auto;
+}
+
+.middle p {
+  padding: 32px;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.dropdown {
+  display: none;
+}
+
+.dropdown a {
+  color: white;
+  text-decoration: none;
+  right: 0px;
+  position: relative;
+  padding: 8px;
+}
+.icons {
+  position: relative;
+  float: right;
+  margin: auto;
+  padding: auto;
+  right: 0px;
+  left: 150px;
+  padding-top: 18px;
+}
+
+#text {
+  position: relative;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 1.25rem;
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+}
+.scroll-downs {
+  display: none;
+  position: absolute;
+  top: 70vh;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width :34px;
+  height: 55px;
+}
+.mousey {
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0;}
+}
+.about {
+  position: relative;
+  height: 400px;
+  padding: 16px;
+  background-color: #e6e6e6;
+  width: 100vw;
+  color: #2e3b5b;
+  top: 50vh;
+  padding-top: 32px;
+  font-weight: bolder;
+  
+}
+
+.about h2 {
+  text-align: center;
+  color: #2e3b5b;
+  padding-top: 32px;
+  font-size: 2rem;
+}
+
+.about p {
+  color: #2e3b5b;
+  text-align: center;
+  padding: 16px;
+  width: 85%;
+  left: 0;
+  right: 0;
+  padding-top: 32px;
+  font-size: 1.20rem;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    margin: auto;
+    padding: auto;
+    height: fit-content;
+    overflow-x: hidden; /* Fix for extra space on the right side */
+  }
+
+  .logo-nav {
+    width: 9rem;
+  }
+
+  .dropdown {
+    display: block;
+    position:relative;
+    display: inline-block;
+    right: 0px;
+  }
+  
+  .middle img {
+    width: 90%;
+  }
+
+  .middle p {
+    padding-top: 20px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .logo-mobile {
+    width: 4rem;
+    float: left;
+    padding: 12px;
+    user-select: none;
+    position: relative;
+    right: 0px
+  }
+  .about {
+    top: 60vh;
+    height: fit-content;
+    width: fit-content;
+  }
+  .about p {
+    font-size: 1rem;
+    padding: 16px;
+    width: 85%;
+    left: 0;
+    right: 0;
+  }
+  #text {
+    font-size: 1rem;
+    top: 30px;
+  }
+  .middle {
+    top: 30vh;
+  }
+  .scroll-downs {
+    display: block;
+  }
+}
