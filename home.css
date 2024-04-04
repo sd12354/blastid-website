@@ -118,22 +118,25 @@ p {
 
 .dropdown {
   display: none;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  width: 100%;
+  text-align: center;
 }
 
 .dropdown a {
   color: white;
   text-decoration: none;
-  right: 0px;
   position: relative;
   padding: 8px;
 }
 .icons {
   position: relative;
-  float: right;
   margin: auto;
   padding: auto;
   right: 0px;
-  left: 150px;
+  left: 0px;
   padding-top: 18px;
 }
 
@@ -229,6 +232,7 @@ p {
     position:relative;
     display: inline-block;
     right: 0px;
+    top: 20px;
   }
   
   .middle img {
